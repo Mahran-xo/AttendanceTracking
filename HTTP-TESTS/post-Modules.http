@@ -1,0 +1,8 @@
+POST http://localhost:3000/Modules
+Content-Type: application/json
+
+{
+    "moduleName":"Introduction to Cloud Computing",
+    "moduleCode":"22CSCI37H",
+    "assignedProfessor":"Marwa Salah Farhan"
+}
