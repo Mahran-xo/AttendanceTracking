@@ -16,6 +16,7 @@ module.exports.postModule=async(req,res)=>{
             moduleName : addedModule.moduleName,
             moduleCode: addedModule.moduleCode,
             assignedProfessor: addedModule.assignedProfessor
+            
         
         });
     }
@@ -27,3 +28,4 @@ module.exports.postModule=async(req,res)=>{
     }
 
 };
+

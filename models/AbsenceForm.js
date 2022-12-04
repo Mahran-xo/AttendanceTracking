@@ -2,36 +2,26 @@ const{Schema , model} = require('mongoose');
 
 const AbsenceFormSchema = new Schema({
 
-    studentname:{
-        type:'String',
-        required:true
-    },
+   
 
     studentId:{
-        type:'Number',
-        required :true
-    },
-
-    moduleName:{
-        type:'String',
+        type:Schema.Types.ObjectId,
+        ref:'Student',
         required:true
     },
 
-    moduleCode:{
-        type:'String',
-        required:true
-    },
+    module:
 
+        {
+            type:Schema.Types.ObjectId,
+            ref:'module',
+            required:true
+        },
+
+    
     reason:{
         type:'String',
         required:true
-    },
-
-    reasonVal:{
-
-        data: Buffer, 
-        contentType: String 
-
     }
 
 });

@@ -1,0 +1,10 @@
+POST http://localhost:3000/Students/AssignToModule
+Content-Type: application/json
+
+{
+
+    "id":"638cbb13192b5fc1a5334db4",
+    "module":"638cbb1c192b5fc1a5334db6"
+    
+    
+}

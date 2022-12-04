@@ -1,0 +1,10 @@
+POST  http://localhost:3000/Students/RemoveStudentFromModule
+Content-Type: application/json
+
+{
+
+    "id":"638cba563732eb7dd33781fc",
+    "module":"638cba4b3732eb7dd33781fa"
+    
+    
+}

@@ -15,7 +15,14 @@ const ModuleSchema = new Schema({
     assignedProfessor:{
         type:'String',
         required:true
-    }
+    },
+
+    studentId:
+        [{
+        type:Schema.Types.ObjectId,
+        ref:'Student'
+        }]
+    
 
 });
 

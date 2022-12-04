@@ -1,4 +1,4 @@
-const{Schema , model} = require('mongoose');
+const{Schema , model, SchemaType} = require('mongoose');
 
 const AttendanceSchema = new Schema({
 
@@ -11,16 +11,19 @@ const AttendanceSchema = new Schema({
         type:'Number',
         required :true
     },
-
-    studentname:{
-        type:'String',
+    student:[{
+        
+        isAttended:{
+            type:'Boolean',
+            default:false
+        },
+        
+       studentId:{
+        type:Schema.Types.ObjectId,
+        ref:'student',
         required:true
-    },
-
-    studentId:{
-        type:'Number',
-        required :true
-    },
+    }
+}],
 
     Date:{
         type:'Date',

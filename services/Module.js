@@ -1,5 +1,6 @@
 const ModuleModel = require('../models/Module');
 var readline = require('readline');
+const {ObjectId} = require('mongoose').Types;
 
 
 
@@ -8,7 +9,8 @@ module.exports.AddModule=async(ModuleInfo)=>{
     const Module = new ModuleModel({ 
         moduleName: ModuleInfo.moduleName,
         moduleCode: ModuleInfo.moduleCode,
-        assignedProfessor: ModuleInfo.assignedProfessor });
+        assignedProfessor: ModuleInfo.assignedProfessor
+     });
 
     try{
         const addedModule = await Module.save();

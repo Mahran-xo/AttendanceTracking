@@ -17,21 +17,15 @@ const StudentSchema = new Schema({
         required:true
     },
 
-    module:{
 
-        modulename:{
-            type:'String',
-            required:true
-        },
-    
-        moduleCode:{
-            type:'Number',
-            required :true
-        }
-    
-    }
+    module:[{
+
+            type: Schema.Types.ObjectId,
+            ref:'module'
+        }]
 
 });
 
-const StudentModel=model('student',StudentSchema);
+
+const StudentModel=model('Student',StudentSchema);
 module.exports=StudentModel;
