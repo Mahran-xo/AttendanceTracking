@@ -2,7 +2,7 @@ POST http://localhost:3000/Students
 Content-Type: application/json
 
 {
-    "name":"Ali",
-    "id":193085,
-    "email":"ali193085@bue.edu.eg"
+    "name":"Maiada",
+    "id":203398,
+    "email":"Maiada203398@bue.edu.eg"
 }

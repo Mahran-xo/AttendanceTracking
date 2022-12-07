@@ -1,0 +1,9 @@
+POST http://localhost:3000/Attendance/AddAttendance
+Content-Type: application/json
+
+{
+    "sheetId":"638e73f791d4c5d3cce33568",
+    "studentIds":["638d0c4fd5fde209c75837fa"]
+    
+    
+}

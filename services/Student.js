@@ -41,7 +41,7 @@ module.exports.AssignStudentToModule=async(StudentInfo)=>{
 
             const assignedMod = await ModuleModel.updateOne({_id:Student.module},
 
-                {$push:{studentId:Student.id}}
+                {$push:{student:{studentId:Student.id}}}
                 
                 
                 );
@@ -67,39 +67,26 @@ module.exports.RemoveStudentFromModule=async(StudentInfo)=>{
         id: StudentInfo.id,
         module:StudentInfo.module
     };
-
-
         try{
-
             const removedStudent = await StudentModel.updateOne({_id:Student.id},
-
                 {$pullAll:{module:[Student.module]}}
-
-
                 );
 
             const removedMod = await ModuleModel.updateOne({_id:Student.module},
-
                 {$pullAll:{studentId:[Student.id]}}
-                
-                
                 );
 
-
             return removedStudent;
-
             }
-            
-        
+
         catch(error){
             console.log(error);
             throw new Error('Could not remove student');
         }
 
-
 }
 
-module.exports.RetrieveAllStudents=async(StudentInfo)=>{
+module.exports.RetrieveAllStudents=async()=>{
 
         try{
             const Students = await StudentModel.find().populate('module');
@@ -114,7 +101,7 @@ module.exports.RetrieveAllStudents=async(StudentInfo)=>{
         }
 
 
-}
+};
 
 
 

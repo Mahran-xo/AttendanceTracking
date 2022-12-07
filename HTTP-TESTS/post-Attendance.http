@@ -1,0 +1,8 @@
+POST http://localhost:3000/Attendance
+Content-Type: application/json
+
+{
+
+    "lectureHall":"LH-3",
+    "moduleId":"638d1d4fc01fc9b4497d2c7c"
+}

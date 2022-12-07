@@ -12,9 +12,11 @@ const port = process.env.port;
 const initializeDBConnection=require('./config/db');
 const StudentsRouter=require('./routes/Students');
 const ModuleRouter=require('./routes/Modules');
+const AttendanceRouter=require('./routes/AttendanceTracking');
 
 App.use('/Students',StudentsRouter);
 App.use('/Modules',ModuleRouter);
+App.use('/Attendance',AttendanceRouter);
 
 App.listen(port,async()=>{
 

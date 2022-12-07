@@ -1,0 +1,8 @@
+POST https://prod-21.centralus.logic.azure.com:443/workflows/6df1a941345d4701891a6fecb3405ade/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ssDLl3l_bGpOY85EwZ4ZOksk1kjivbzj6WiKB3_tbzM
+Content-Type: application/json
+
+{
+        "email": "ali193085@bue.edu.eg",
+        "moduleCode": "25CSHIS",
+        "studentName": "Ali"
+}

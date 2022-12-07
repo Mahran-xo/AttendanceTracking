@@ -1,37 +1,41 @@
-const{Schema , model, SchemaType} = require('mongoose');
+const { Schema, model, SchemaType } = require('mongoose');
 
 const AttendanceSchema = new Schema({
 
-    modulename:{
-        type:'String',
-        required:true
+    moduleName: {
+        type: 'String',
+        required: true
     },
 
-    moduleCode:{
-        type:'Number',
-        required :true
+    moduleCode: {
+        type: 'String',
+        required: true
     },
-    student:[{
-        
-        isAttended:{
-            type:'Boolean',
-            default:false
+    student: [{
+
+        isAttended: {
+            type: 'Boolean',
+            default: false
         },
-        
-       studentId:{
-        type:Schema.Types.ObjectId,
-        ref:'student',
-        required:true
-    }
-}],
 
-    Date:{
-        type:'Date',
-        required:true
+        studentId: {
+            type: Schema.Types.ObjectId,
+            ref: 'Student',
+            required: true
+        }
+    }],
+
+    Date: {
+        type: 'Date',
+        required: true
     },
 
-    lectureHall:{
-        type:'String',
-        required:true
+    lectureHall: {
+        type: 'String',
+        required: true
     }
 });
+
+
+const AttendanceModel = model('Attendance', AttendanceSchema);
+module.exports = AttendanceModel;
