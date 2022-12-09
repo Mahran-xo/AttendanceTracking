@@ -1,9 +1,17 @@
 const StudentService = require('../services/Student');
-
+const {validationResult} = require('express-validator');
 
 
 
 module.exports.postStudent=async(req,res)=>{
+
+    const validationErrors = validationResult(req).array();
+    if(validationErrors.length>0){
+        const firstError = validationErrors[0];
+        return res.status(422).send({
+            error:firstError.msg
+        });
+    }
 
     const StudentInfo={
         name: req.body.name,
