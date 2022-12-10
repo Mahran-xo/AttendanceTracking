@@ -1,6 +1,7 @@
 const AttendanceModel = require('../models/Attendance');
 const AbsenceModel = require('../models/AbsenceForm');
 const ModuleModel = require('../models/Module');
+const StudentModel = require('../models/Student');
 const axios = require('axios');
 
 
@@ -16,6 +17,17 @@ module.exports.SubmitAbscenceForm = async (AbsenceForm) => {
     try {
 
         const ABSsaved = await ABS.save();
+        const resp = await StudentModel.findOne({_id:ABS.studentId})
+        const modspec = await ModuleModel.findOne({_id:ABS.module})
+
+        jsonData={
+            studentName:resp.name,
+            email:resp.email,
+            moduleCode:modspec.moduleCode,
+            assignedProfessor:modspec.assignedProfessor
+        }
+        axios.post(process.env.ABSENCE, jsonData);
+         
         return ABSsaved;
 
     }
