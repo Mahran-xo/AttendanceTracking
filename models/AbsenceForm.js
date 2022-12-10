@@ -20,7 +20,11 @@ const AbsenceFormSchema = new Schema({
 
 
     reason: {
-        type: 'String'
+        type: 'String',
+        required:true
     }
 
 });
+
+const AbsenceModel = model('Absence', AbsenceFormSchema);
+module.exports =AbsenceModel;
