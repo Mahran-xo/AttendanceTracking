@@ -1,4 +1,4 @@
-POST http://localhost:3000/Attendance/AddAttendance
+POST https://attendancetracking.azurewebsites.net//Attendance/AddAttendance
 Content-Type: application/json
 
 {

@@ -1,4 +1,4 @@
-POST http://localhost:3000/Modules
+POST https://attendancetracking.azurewebsites.net//Modules
 Content-Type: application/json
 
 {
