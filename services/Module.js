@@ -21,3 +21,54 @@ module.exports.AddModule=async(ModuleInfo)=>{
 
    
 }
+
+module.exports.RemoveModule=async(ModuleInfo)=>{
+
+    const ModuleStudent ={ 
+        Name: ModuleInfo.moduleName,
+        id: StudentInfo.id
+    };
+        try{
+            const removeModule = await ModuleModel.updateOne({_Name:Module.moduleName},
+                {$pullAll:{student:[StudentInfo.id]}}
+                );
+
+            return removeModule;
+            }
+
+        catch(error){
+            console.log(error);
+            throw new Error('Could not remove Module');
+        }
+
+}
+
+
+
+module.exports.RetrieveAllModule=async()=>{
+
+    try{
+        const Modules = await ModuleModel.find().populate('module');
+        return Modules
+
+        }
+        
+    
+    catch(error){
+        console.log(error);
+        throw new Error('Could not retrive Modules');
+    }
+
+
+};
+
+module.exports.updateModule = async (moduleName, assignedProfessor) => {
+    try {
+      const filter = { _Name: moduleName };
+      const update = { assignedProfessor: assignedProfessor };
+      let result = await MedicalRecordsModel.findOneAndUpdate(filter, update);
+      return result;
+    } catch (err) {
+      throw new Error('Could not remove Institute.');
+    }
+  }
