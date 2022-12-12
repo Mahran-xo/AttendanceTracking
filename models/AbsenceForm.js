@@ -21,7 +21,7 @@ const AbsenceFormSchema = new Schema({
 
     reason: {
         type: 'String',
-        required:true
+        required:false
     }
 
 });

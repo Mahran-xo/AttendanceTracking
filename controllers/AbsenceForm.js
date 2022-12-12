@@ -9,10 +9,12 @@ module.exports.postAbsence=async(req,res)=>{
     };
 
     try{
-        await AbsenceService.SubmitAbscenceForm(AbsenceInfo);
+        
+        const abs = await AbsenceService.SubmitAbscenceForm(AbsenceInfo);
         
         return res.status(201).send({
-            msg:'Attendance sheet Added successfully!'
+            msg:'Attendance sheet Added successfully!',
+            abs
         
         });
     }

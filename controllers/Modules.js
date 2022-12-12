@@ -29,34 +29,6 @@ module.exports.postModule=async(req,res)=>{
 
 };
 
-module.exports.AssignToModule =async(req,res)=>{
-   
-    const StudentInfo={
-        id: req.body.id,
-        module:req.body.module
-    };
-
-    try{
-        const addedStudent = await StudentService.AssignStudentToModule(StudentInfo);
-
-        
-        
-        return res.status(201).send({
-            msg:'Student Added successfully!',
-        
-        });
-
-        
-    }
-    catch(err){
-
-        return res.status(500).send({
-            error:err.message
-            });
-    }
-
-
-};
 
 module.exports.RemoveModule=async(req,res)=>{
    
