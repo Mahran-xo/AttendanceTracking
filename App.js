@@ -19,8 +19,8 @@ App.use('/Modules',ModuleRouter);
 App.use('/Attendance',AttendanceRouter);
 App.use('/Absence',AbsenceRouter);
 
-App.listen(port,async()=>{
+App.listen(async()=>{
 
-    console.log(`server has been started at port ${port}`);
+    console.log(`server has been started at port `);
     await initializeDBConnection();
 }); //code necessary to start a web server using Express
