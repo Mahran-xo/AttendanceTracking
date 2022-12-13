@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'AttendanceTracking'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C1D12940935B4D5E863F7EBC1527419E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7787EE7D321743EC8BC01A1D6A89B5A0 }}
           package: .
