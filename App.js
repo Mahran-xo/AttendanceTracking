@@ -3,7 +3,7 @@ const cors = require('cors');
 const App = express();
 App.use(express.json());
 
-
+const PORT = process.env.PORT;
 
 App.use(cors());
 
@@ -19,8 +19,8 @@ App.use('/Modules',ModuleRouter);
 App.use('/Attendance',AttendanceRouter);
 App.use('/Absence',AbsenceRouter);
 
-App.listen(async()=>{
+App.listen(PORT,async()=>{
 
-    console.log(`server has been started at port `);
+    console.log(`server has been started at port ${PORT}`);
     await initializeDBConnection();
 }); //code necessary to start a web server using Express
