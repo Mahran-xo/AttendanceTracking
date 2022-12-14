@@ -18,12 +18,12 @@ module.exports.SubmitAbscenceForm = async (AbsenceForm) => {
         const resp = await StudentModel.findById({ _id: ABS.studentId })
         const modspec = await ModuleModel.findOne({ moduleName: ABS.module })
 
-        jsonData = {
+        const jsonData = {
             studentName: resp.name,
             email: resp.email,
             moduleName: modspec.moduleName,
             assignedProfessor: modspec.assignedProfessor
-        }
+        };
         await axios.post(process.env.ABSENCE, jsonData);
         console.log({ ABSsaved });
         return ABSsaved;
