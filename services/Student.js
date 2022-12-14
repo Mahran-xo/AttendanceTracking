@@ -64,7 +64,7 @@ module.exports.AssignStudentToModule=async(StudentInfo)=>{
 
 module.exports.findStudentById = async (StudentId) => {
     try {
-      const student = await ProductModel.findById(StudentId).populate(
+      const student = await StudentModel.findById(StudentId).populate(
         'module'
       );
       return student;
