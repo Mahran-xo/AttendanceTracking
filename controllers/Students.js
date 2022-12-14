@@ -78,7 +78,7 @@ module.exports.AssignToModule =async(req,res)=>{
 module.exports.getStudent = async (req, res) => {
     const studentId = req.params.studentId;
     try {
-      const Student = await StudentService.findProductById(studentId);
+      const Student = await StudentService.findStudentById(studentId);
       if (!Student) {
         return res.status(404).send({
           error: 'Student not found.'
