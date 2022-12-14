@@ -13,8 +13,7 @@ const AbsenceFormSchema = new Schema({
     module:
 
     {
-        type: Schema.Types.ObjectId,
-        ref: 'module',
+        type: "String",
         required: true
     },
 
