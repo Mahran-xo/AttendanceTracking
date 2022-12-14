@@ -1,6 +1,7 @@
-POST https://attendance-tracking.azurewebsites.net/Absence/638d1c8fc01fc9b4497d2c78/638d1d4fc01fc9b4497d2c7c
+POST https://attendance-tracking.azurewebsites.net/Absence/638d1c8fc01fc9b4497d2c78
 Content-Type: application/json
 
 {
+    "module":"Introduction to Cloud Computing",
     "reason":"i was sooo sick"
 }

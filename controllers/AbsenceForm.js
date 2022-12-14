@@ -11,10 +11,10 @@ module.exports.postAbsence=async(req,res)=>{
     try{
         
         const abs = await AbsenceService.SubmitAbscenceForm(AbsenceInfo);
+        console.log({AbsenceInfo});
         
         return res.status(201).send({
-            msg:'Attendance sheet Added successfully!',
-            abs
+            msg:'successfully!'
         
         });
     }

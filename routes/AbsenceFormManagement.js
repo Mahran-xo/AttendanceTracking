@@ -4,7 +4,7 @@ const AbsenceController = require('../controllers/AbsenceForm');
 
 const AbsenceRouter=Router();
 
-AbsenceRouter.post('/:id/:module',AbsenceController.postAbsence);
+AbsenceRouter.post('/:id',AbsenceController.postAbsence);
 AbsenceRouter.get('/RetrieveAbsenceForms',AbsenceController.RetrieveAbsenceForms);
 
 module.exports=AbsenceRouter;
