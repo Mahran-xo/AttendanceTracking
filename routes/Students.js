@@ -9,6 +9,6 @@ StudentsRouter.post('/',StudentValidator.validateStudents(),StudentsController.p
 StudentsRouter.post('/AssignToModule',StudentsController.AssignToModule);
 StudentsRouter.post('/RemoveStudentFromModule',StudentsController.RemoveStudentFromModule);
 StudentsRouter.get('/RetrieveAllStudents',StudentsController.RetrieveAllStudents);
-StudentsRouter.get('/studentId',StudentsController.getStudent);
+StudentsRouter.get('/:studentId',StudentsController.getStudent);
 
 module.exports=StudentsRouter;
