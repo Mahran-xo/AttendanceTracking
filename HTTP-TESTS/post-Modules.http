@@ -1,4 +1,4 @@
-POST https://attendancetracking.azurewebsites.net//Modules
+POST https://attendance-tracking.azurewebsites.net///Modules
 Content-Type: application/json
 
 {

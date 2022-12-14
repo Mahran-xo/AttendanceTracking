@@ -1,4 +1,4 @@
-POST  https://attendancetracking.azurewebsites.net//Students/RemoveStudentFromModule
+POST  https://attendance-tracking.azurewebsites.net///Students/RemoveStudentFromModule
 Content-Type: application/json
 
 {

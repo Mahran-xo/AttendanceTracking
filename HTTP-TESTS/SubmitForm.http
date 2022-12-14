@@ -1,4 +1,4 @@
-POST https://attendancetracking.azurewebsites.net//Absence/638d1c8fc01fc9b4497d2c78/638d1d4fc01fc9b4497d2c7c
+POST https://attendance-tracking.azurewebsites.net///Absence/638d1c8fc01fc9b4497d2c78/638d1d4fc01fc9b4497d2c7c
 Content-Type: application/json
 
 {

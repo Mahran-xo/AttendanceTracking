@@ -1,1 +1,1 @@
-GET https://attendancetracking.azurewebsites.net/Absence/RetrieveAbsenceForms
+GET https://attendance-tracking.azurewebsites.net//Absence/RetrieveAbsenceForms

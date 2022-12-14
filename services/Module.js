@@ -48,7 +48,7 @@ module.exports.RemoveModule=async(ModuleInfo)=>{
 module.exports.RetrieveAllModule=async()=>{
 
     try{
-        const Modules = await ModuleModel.find().populate('module');
+        const Modules = await ModuleModel.find().populate('Module');
         return Modules
 
         }
