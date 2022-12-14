@@ -74,6 +74,30 @@ module.exports.AssignToModule =async(req,res)=>{
 
 };
 
+
+module.exports.getStudent = async (req, res) => {
+    const studentId = req.params.studentId;
+    try {
+      const Student = await StudentService.findProductById(studentId);
+      if (!Student) {
+        return res.status(404).send({
+          error: 'Student not found.'
+        });
+      }
+      return res.send({
+        Student: Student
+      });
+    } catch (err) {
+      res.status(500).send({
+        error: err.message
+      });
+    }
+  };
+
+
+
+
+
 module.exports.RemoveStudentFromModule=async(req,res)=>{
    
     const StudentInfo={
