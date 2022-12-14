@@ -102,7 +102,7 @@ module.exports.RemoveStudentFromModule=async(StudentInfo)=>{
 module.exports.RetrieveAllStudents=async()=>{
 
         try{
-            const Students = await StudentModel.find();
+            const Students = await StudentModel.find().populate('module');
             return Students
 
             }
