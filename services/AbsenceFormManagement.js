@@ -16,7 +16,7 @@ module.exports.SubmitAbscenceForm = async (AbsenceForm) => {
 
         const ABSsaved = await ABS.save();
         const resp = await StudentModel.findById({ _id: ABS.studentId })
-        const modspec = await ModuleModel.findOne({ moduleName: ABS.module })
+        const modspec = await ModuleModel.findById({ _id: ABS.module })
 
         const jsonData = {
             studentName: resp.name,
