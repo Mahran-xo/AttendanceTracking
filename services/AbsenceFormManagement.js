@@ -26,7 +26,7 @@ module.exports.SubmitAbscenceForm = async (AbsenceForm) => {
             moduleCode:modspec.moduleCode,
             assignedProfessor:modspec.assignedProfessor
         }
-        axios.post(process.env.ABSENCE, jsonData);
+        await axios.post(process.env.ABSENCE, jsonData);
         console.log({ABSsaved});
         return ABSsaved;
 
