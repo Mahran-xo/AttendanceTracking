@@ -4,7 +4,7 @@ module.exports.postAbsence=async(req,res)=>{
 
     const AbsenceInfo={
         id:req.params.id,
-        module:req.params.module,
+        module:req.body.module,
         reason:req.body.reason
     };
 
