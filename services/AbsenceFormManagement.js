@@ -35,7 +35,7 @@ module.exports.SubmitAbscenceForm = async (AbsenceForm) => {
 
     catch (error) {
         console.log(error);
-        throw new Error('Abscence Form submitted');
+        throw new Error(error);
     }
 
 
