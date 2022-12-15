@@ -62,17 +62,17 @@ module.exports.RetrieveAllModule=async()=>{
 
 };
 
-module.exports.updateModule = async (moduleName, assignedProfessor) => {
+
+  module.exports.updateModule = async (moduleID, assignedProfessor) => {
     try {
-      const filter = { _Name: moduleName };
+      const filter = { moduleID: moduleID };
       const update = { assignedProfessor: assignedProfessor };
-      let result = await MedicalRecordsModel.findOneAndUpdate(filter, update);
+      let result = await ModuleModel.findOneAndUpdate(filter, update);
       return result;
     } catch (err) {
-      throw new Error('Could not remove Institute.');
+      throw new Error('Could not update the assigned professor.');
     }
-  }
-
+  };
 
  
 

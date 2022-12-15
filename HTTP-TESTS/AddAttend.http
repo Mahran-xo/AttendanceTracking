@@ -1,9 +1,9 @@
-POST https://attendance-tracking.azurewebsites.net/Attendance/AddAttendance/
+POST https://attendance-tracking.azurewebsites.net/Attendance/AddAttendance
 Content-Type: application/json
 
 {
-    "sheetId":"638e73f791d4c5d3cce33568",
-    "studentIds":["638d0c4fd5fde209c75837fa"]
+    "sheetId":"639a9b511639aa13d3be2e39",
+    "studentIds":["638d1c8fc01fc9b4497d2c78"]
     
     
 }

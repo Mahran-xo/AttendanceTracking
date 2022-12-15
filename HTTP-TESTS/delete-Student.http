@@ -1,10 +1,10 @@
-POST  https://attendance-tracking.azurewebsites.net///Students/RemoveStudentFromModule
+POST  https://attendance-tracking.azurewebsites.net/Students/RemoveStudentFromModule/639a62f8383dedb2974cbba7
 Content-Type: application/json
 
 {
 
-    "id":"638cbb13192b5fc1a5334db4",
-    "module":"638cbb1c192b5fc1a5334db6"
+    
+    "module":"638d1d4fc01fc9b4497d2c7c"
     
     
 }
