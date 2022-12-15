@@ -1,9 +1,9 @@
-POST https://attendance-tracking.azurewebsites.net///Students/AssignToModule
+POST https://attendance-tracking.azurewebsites.net/Students/AssignToModule/639a62f8383dedb2974cbba7
 Content-Type: application/json
 
 {
 
-    "id":"638e733591d4c5d3cce33563",
+    
     "module":"638d1d4fc01fc9b4497d2c7c"
     
     

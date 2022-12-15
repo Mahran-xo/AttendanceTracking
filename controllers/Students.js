@@ -48,7 +48,7 @@ module.exports.postStudent=async(req,res)=>{
 module.exports.AssignToModule =async(req,res)=>{
    
     const StudentInfo={
-        id: req.body.id,
+        id: req.params.id,
         module:req.body.module
     };
 
