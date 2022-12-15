@@ -101,7 +101,7 @@ module.exports.getStudent = async (req, res) => {
 module.exports.RemoveStudentFromModule=async(req,res)=>{
    
     const StudentInfo={
-        id: req.body.id,
+        id: req.params.id,
         module:req.body.module
     };
 
