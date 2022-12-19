@@ -40,7 +40,7 @@ module.exports.doesUserExist=async(username)=>{
         return addedUser;
     }catch(error){
         console.log(error);
-        throw new Error('Could not add User');
+        throw new Error('Could not add Userr');
     }
 
    
